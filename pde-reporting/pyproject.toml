@@ -1,0 +1,23 @@
+[project]
+name = "pde-reporting"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Shubham Singh",email = "ssingh38@woolworths.com.au"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-cloud-bigquery (>=3.29.0,<4.0.0)",
+    "dbt-core (>=1.9.2,<2.0.0)",
+    "dbt-bigquery (>=1.9.1,<2.0.0)",
+    "pre-commit (>=4.1.0,<5.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "pde_reporting", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
