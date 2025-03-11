@@ -1,0 +1,197 @@
+[0m01:29:57.240586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f336eac8790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f336eabaa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f336eabb010>]}
+
+
+============================== 01:29:57.285181 | d47045f7-8647-4172-8137-565b58db5723 ==============================
+[0m01:29:57.285181 [info ] [MainThread]: Running with dbt=1.9.2
+[0m01:29:57.286580 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ssingh38_woolworths_com_au/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:29:57.334789 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/ssingh38_woolworths_com_au/.dbt')}
+[0m01:29:57.335773 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m01:30:24.176829 [debug] [MainThread]: Starter project path: /home/ssingh38_woolworths_com_au/.cache/pypoetry/virtualenvs/dbt-bigquery-test-1H5ZGOQX-py3.11/lib/python3.11/site-packages/dbt/include/starter_project
+[0m01:30:24.181528 [info ] [MainThread]: 
+Your new dbt project "bigquery" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:30:24.182234 [info ] [MainThread]: Setting up your profile.
+[0m01:31:11.264641 [info ] [MainThread]: Profile bigquery written to /home/ssingh38_woolworths_com_au/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:31:11.277049 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 74.10197, "process_in_blocks": "10608", "process_kernel_time": 0.528091, "process_mem_max_rss": "218120", "process_out_blocks": "72312", "process_user_time": 6.161061}
+[0m01:31:11.277807 [debug] [MainThread]: Command `dbt init` succeeded at 01:31:11.277629 after 74.10 seconds
+[0m01:31:11.278406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f336eac8cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f33607da410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f337269c050>]}
+[0m01:31:11.279048 [debug] [MainThread]: Flushing usage events
+[0m01:31:12.533847 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:31:51.364152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f32d2d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f32d2ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f32d33d0>]}
+
+
+============================== 01:31:51.368360 | 5f5ee9ff-6a43-4db7-9979-16f9d5b4940a ==============================
+[0m01:31:51.368360 [info ] [MainThread]: Running with dbt=1.9.2
+[0m01:31:51.369560 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ssingh38_woolworths_com_au/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:31:51.383208 [info ] [MainThread]: dbt version: 1.9.2
+[0m01:31:51.383954 [info ] [MainThread]: python version: 3.11.5
+[0m01:31:51.384665 [info ] [MainThread]: python path: /home/ssingh38_woolworths_com_au/.cache/pypoetry/virtualenvs/dbt-bigquery-test-1H5ZGOQX-py3.11/bin/python
+[0m01:31:51.385344 [info ] [MainThread]: os info: Linux-4.19.0-27-cloud-amd64-x86_64-with-glibc2.28
+[0m01:31:52.269032 [info ] [MainThread]: Using profiles dir at /home/ssingh38_woolworths_com_au/.dbt
+[0m01:31:52.269862 [info ] [MainThread]: Using profiles.yml file at /home/ssingh38_woolworths_com_au/.dbt/profiles.yml
+[0m01:31:52.270548 [info ] [MainThread]: Using dbt_project.yml file at /home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml
+[0m01:31:52.271207 [info ] [MainThread]: adapter type: bigquery
+[0m01:31:52.271847 [info ] [MainThread]: adapter version: 1.9.1
+[0m01:31:52.272458 [info ] [MainThread]: Configuration:
+[0m01:31:52.273089 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:31:52.273655 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:31:52.274260 [info ] [MainThread]: Required dependencies:
+[0m01:31:52.274897 [debug] [MainThread]: Executing "git --help"
+[0m01:31:52.279488 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout    Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
+[0m01:31:52.280180 [debug] [MainThread]: STDERR: "b''"
+[0m01:31:52.280680 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:31:52.281552 [info ] [MainThread]: Connection:
+[0m01:31:52.282268 [info ] [MainThread]:   method: oauth
+[0m01:31:52.282869 [info ] [MainThread]:   database: gcp-wow-rwds-ai-mmm-dev
+[0m01:31:52.283484 [info ] [MainThread]:   execution_project: gcp-wow-rwds-ai-mmm-dev
+[0m01:31:52.284081 [info ] [MainThread]:   schema: shubham
+[0m01:31:52.284701 [info ] [MainThread]:   location: US
+[0m01:31:52.285338 [info ] [MainThread]:   priority: interactive
+[0m01:31:52.285914 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m01:31:52.286477 [info ] [MainThread]:   impersonate_service_account: None
+[0m01:31:52.287073 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m01:31:52.287647 [info ] [MainThread]:   job_retries: 1
+[0m01:31:52.288263 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m01:31:52.288889 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m01:31:52.289507 [info ] [MainThread]:   timeout_seconds: 300
+[0m01:31:52.290055 [info ] [MainThread]:   client_id: None
+[0m01:31:52.290603 [info ] [MainThread]:   token_uri: None
+[0m01:31:52.291212 [info ] [MainThread]:   dataproc_region: None
+[0m01:31:52.291783 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m01:31:52.292397 [info ] [MainThread]:   gcs_bucket: None
+[0m01:31:52.292981 [info ] [MainThread]:   dataproc_batch: None
+[0m01:31:52.293824 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m01:31:52.526127 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m01:31:52.526887 [debug] [MainThread]: On debug: select 1 as id
+[0m01:31:52.527646 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:31:52.753703 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gcp-wow-rwds-ai-mmm-dev&j=bq:US:54bd836c-74b2-472d-b24d-14dd24726366&page=queryresults
+[0m01:31:52.754530 [error] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gcp-wow-rwds-ai-mmm-dev&j=bq:US:54bd836c-74b2-472d-b24d-14dd24726366&page=queryresults
+[0m01:31:52.755843 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m01:31:52.756596 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:31:52.757305 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml> not found
+
+[0m01:31:52.758057 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Access Denied: BigQuery BigQuery: Missing required OAuth scope. Need BigQuery or Cloud Platform read scope.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m01:31:52.759659 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.4618356, "process_in_blocks": "112", "process_kernel_time": 0.268787, "process_mem_max_rss": "209692", "process_out_blocks": "176", "process_user_time": 2.675843}
+[0m01:31:52.760349 [debug] [MainThread]: Command `dbt debug` failed at 01:31:52.760193 after 1.46 seconds
+[0m01:31:52.760940 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m01:31:52.761594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f32db550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4f5682850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4de32f590>]}
+[0m01:31:52.762190 [debug] [MainThread]: Flushing usage events
+[0m01:31:52.954221 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:22:01.465123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2181d1f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2181ecc390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2181ecf490>]}
+
+
+============================== 23:22:01.468568 | e5315a7e-5c46-429b-9582-4e0666d2117f ==============================
+[0m23:22:01.468568 [info ] [MainThread]: Running with dbt=1.9.2
+[0m23:22:01.469403 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ssingh38_woolworths_com_au/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:22:01.478173 [info ] [MainThread]: dbt version: 1.9.2
+[0m23:22:01.478733 [info ] [MainThread]: python version: 3.11.5
+[0m23:22:01.479360 [info ] [MainThread]: python path: /home/ssingh38_woolworths_com_au/.cache/pypoetry/virtualenvs/dbt-bigquery-test-1H5ZGOQX-py3.11/bin/python
+[0m23:22:01.479918 [info ] [MainThread]: os info: Linux-4.19.0-27-cloud-amd64-x86_64-with-glibc2.28
+[0m23:22:02.238027 [info ] [MainThread]: Using profiles dir at /home/ssingh38_woolworths_com_au/.dbt
+[0m23:22:02.238721 [info ] [MainThread]: Using profiles.yml file at /home/ssingh38_woolworths_com_au/.dbt/profiles.yml
+[0m23:22:02.239294 [info ] [MainThread]: Using dbt_project.yml file at /home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml
+[0m23:22:02.239907 [info ] [MainThread]: adapter type: bigquery
+[0m23:22:02.240477 [info ] [MainThread]: adapter version: 1.9.1
+[0m23:22:02.241089 [info ] [MainThread]: Configuration:
+[0m23:22:02.241639 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:22:02.242237 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:22:02.242844 [info ] [MainThread]: Required dependencies:
+[0m23:22:02.243493 [debug] [MainThread]: Executing "git --help"
+[0m23:22:02.245983 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout    Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
+[0m23:22:02.246469 [debug] [MainThread]: STDERR: "b''"
+[0m23:22:02.246839 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:22:02.247445 [info ] [MainThread]: Connection:
+[0m23:22:02.248064 [info ] [MainThread]:   method: oauth
+[0m23:22:02.248730 [info ] [MainThread]:   database: gcp-wow-rwds-ai-mmm-dev
+[0m23:22:02.249390 [info ] [MainThread]:   execution_project: gcp-wow-rwds-ai-mmm-dev
+[0m23:22:02.249987 [info ] [MainThread]:   schema: shubham
+[0m23:22:02.250671 [info ] [MainThread]:   location: US
+[0m23:22:02.251321 [info ] [MainThread]:   priority: interactive
+[0m23:22:02.252003 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:22:02.252933 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:22:02.253580 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:22:02.254293 [info ] [MainThread]:   job_retries: 1
+[0m23:22:02.254911 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:22:02.255612 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m23:22:02.256232 [info ] [MainThread]:   timeout_seconds: 300
+[0m23:22:02.256879 [info ] [MainThread]:   client_id: None
+[0m23:22:02.257576 [info ] [MainThread]:   token_uri: None
+[0m23:22:02.258225 [info ] [MainThread]:   dataproc_region: None
+[0m23:22:02.258978 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:22:02.259655 [info ] [MainThread]:   gcs_bucket: None
+[0m23:22:02.260326 [info ] [MainThread]:   dataproc_batch: None
+[0m23:22:02.261222 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:22:02.396032 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:22:02.396620 [debug] [MainThread]: On debug: select 1 as id
+[0m23:22:02.397125 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:22:03.333497 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gcp-wow-rwds-ai-mmm-dev&j=bq:US:bb194084-365a-4ae9-8467-ae8f19e4d8cb&page=queryresults
+[0m23:22:03.638945 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:22:03.640171 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:22:03.640916 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml> not found
+
+[0m23:22:03.642622 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.235961, "process_in_blocks": "0", "process_kernel_time": 0.287045, "process_mem_max_rss": "214096", "process_out_blocks": "24", "process_user_time": 2.328258}
+[0m23:22:03.643295 [debug] [MainThread]: Command `dbt debug` failed at 23:22:03.643113 after 2.24 seconds
+[0m23:22:03.643849 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:22:03.644371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2181ecdc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2181d1f1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2170d37bd0>]}
+[0m23:22:03.645016 [debug] [MainThread]: Flushing usage events
+[0m23:22:03.771998 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:47:13.757624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3922bc2a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3922bc2bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3922bc3110>]}
+
+
+============================== 23:47:13.761380 | ee32989d-1a92-46cf-a8e2-4347357b200b ==============================
+[0m23:47:13.761380 [info ] [MainThread]: Running with dbt=1.9.2
+[0m23:47:13.762262 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ssingh38_woolworths_com_au/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:47:13.762973 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:47:13.764438 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.065811485, "process_in_blocks": "0", "process_kernel_time": 0.235669, "process_mem_max_rss": "90344", "process_out_blocks": "16", "process_user_time": 1.653681}
+[0m23:47:13.765135 [debug] [MainThread]: Command `dbt run` failed at 23:47:13.764987 after 0.07 seconds
+[0m23:47:13.765708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3922bcbad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3922bc8950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3926875f50>]}
+[0m23:47:13.766436 [debug] [MainThread]: Flushing usage events
+[0m23:47:13.979311 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:49:20.532064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1a182a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1a17ac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1a17bf50>]}
+
+
+============================== 23:49:20.535789 | ad2d9093-b278-4782-b5b1-3cf579afd77a ==============================
+[0m23:49:20.535789 [info ] [MainThread]: Running with dbt=1.9.2
+[0m23:49:20.536656 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ssingh38_woolworths_com_au/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:49:20.537351 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/ssingh38_woolworths_com_au/dbt_demo/dbt_bigquery_test/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:49:20.538979 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.07167901, "process_in_blocks": "0", "process_kernel_time": 0.220359, "process_mem_max_rss": "90468", "process_out_blocks": "8", "process_user_time": 1.778899}
+[0m23:49:20.539845 [debug] [MainThread]: Command `dbt run` failed at 23:49:20.539667 after 0.07 seconds
+[0m23:49:20.540356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1a182b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1a17a490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1ddfec50>]}
+[0m23:49:20.540923 [debug] [MainThread]: Flushing usage events
+[0m23:49:20.709940 [debug] [MainThread]: An error was encountered while trying to flush usage events
