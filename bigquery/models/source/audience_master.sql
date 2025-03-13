@@ -7,21 +7,13 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='view') }}
-
 with source_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    select * 
+    from `gcp-wow-rwds-ai-mmm-dev.DEV_MMM.MMM_AUDIENCE_MASTER`
 
 )
 
 select *
 from source_data
-
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
-
--- where id is not null
+limit 10000
