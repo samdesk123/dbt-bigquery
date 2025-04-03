@@ -24,7 +24,7 @@ ENV PATH="/google-cloud-sdk/bin:$PATH"
 RUN mkdir /app
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=/app/jason.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=jason.json
 
 RUN python3 -m ensurepip --default-pip && \
     pip install --no-cache-dir --upgrade pip pipx && \
