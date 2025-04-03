@@ -33,7 +33,7 @@ WORKDIR /dbt_demo
 COPY . .
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=jason.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=./jason.json
 
 # Install dependencies
 RUN poetry install --no-root
