@@ -32,8 +32,11 @@ WORKDIR /dbt_demo
 # Copy the rest of the project files
 COPY . .
 
+RUN mkdir /dbt_demo/key
+
+RUN jason.json /dbt_demo/key/jason.json
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/jason.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/key/jason.json
 
 RUN ls -a
 # Install dependencies
