@@ -10,19 +10,16 @@ COPY poetry.lock pyproject.toml ./
 # Install Poetry and project dependencies
 RUN pip install poetry && poetry install --no-root
 
-WORKDIR /dbt_demo
-
+# Copy the rest of the project files
 COPY . .
 
 
-# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable dynamically
-# This will be passed at runtime via the workflow or Docker run command
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/sa_key.json
 
 # Set the DBT_PROFILES_DIR environment variable
 ENV DBT_PROFILES_DIR=/app/bigquery
 
-RUN ls -a
 # Run dbt version check (optional)
 RUN poetry run dbt --version
 
