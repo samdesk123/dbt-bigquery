@@ -29,7 +29,7 @@ jobs:
 
       # Configure Docker to use the gcloud command-line tool as a credential helper
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker REGION-docker.pkg.dev
+        run: gcloud auth configure-docker $REGION-docker.pkg.dev
 
       # Build the Docker image
       - name: Build Docker image
