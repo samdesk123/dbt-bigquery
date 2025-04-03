@@ -1,48 +1,34 @@
-FROM python:3.11-slim-bullseye
+# Use a Python base image
+FROM python:3.9-slim-buster
 
-ENV DBT_VERSION=1.0.0
-ENV PATH="/root/.local/bin:$PATH"
+# Set the working directory
+WORKDIR /app
 
-# Install git and gcloud CLI
-RUN apt-get update && \
-    apt-get install -y sudo apt-transport-https ca-certificates curl gpg gnupg git 
+# Copy the Poetry lock file and pyproject.toml
+COPY poetry.lock pyproject.toml ./
 
-# Download and add the missing Google Cloud public key
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor > /etc/apt/trusted.gpg.d/cloud.google.gpg
+# Install Poetry and project dependencies
+RUN pip install poetry && poetry install --no-root
 
-# Add the Google Cloud SDK repository
-RUN echo "deb [signed-by=/etc/apt/trusted.gpg.d/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-RUN apt-get update && \
-    apt-get install -y google-cloud-sdk && \
-    rm -rf /var/lib/apt/lists/*
-
-# Add gcloud to PATH
-ENV PATH="/google-cloud-sdk/bin:$PATH"
-
-RUN python3 -m ensurepip --default-pip && \
-    pip install --no-cache-dir --upgrade pip pipx && \
-    python3 -m pipx ensurepath
-
-RUN pipx install poetry
-
-ENV PATH="/root/.local/bin:$PATH"
+# Copy the rest of the project files
+COPY jason.json /app/jason.json
 
 WORKDIR /dbt_demo
-# Copy the rest of the project files
+
 COPY . .
 
+# Copy the service account key
+COPY sa_key.json /app/sa_key.json
+
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/gha-creds-cd307bac73c69057.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/app/sa_key.json
+
+# Set the DBT_PROFILES_DIR environment variable
+ENV DBT_PROFILES_DIR=/app/bigquery
 
 RUN ls -a
-# Install dependencies
-RUN poetry install --no-root
-
-WORKDIR /dbt_demo/bigquery
-
-ENV DBT_PROFILES_DIR=/dbt_demo/bigquery
-# Run dbt
+# Run dbt version check (optional)
 RUN poetry run dbt --version
 
+# Default command to run dbt run
 CMD ["poetry", "run", "dbt", "run"]
