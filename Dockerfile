@@ -34,7 +34,7 @@ COPY . .
 
 RUN mkdir /dbt_demo/key
 
-RUN jason.json /dbt_demo/key/jason.json
+COPY jason.json /dbt_demo/key/jason.json
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/key/jason.json
 
