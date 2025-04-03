@@ -28,16 +28,12 @@ RUN pipx install poetry
 
 ENV PATH="/root/.local/bin:$PATH"
 
-RUN mkdir /dbt_demo
-# Copy the rest of the project files
-COPY jason.json /app/jason.json
-
 WORKDIR /dbt_demo
-
+# Copy the rest of the project files
 COPY . .
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=./key/jason.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/gha-creds-cd307bac73c69057.json
 
 RUN ls -a
 # Install dependencies
