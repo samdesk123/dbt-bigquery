@@ -20,12 +20,6 @@ RUN apt-get update && \
 # Add gcloud to PATH
 ENV PATH="/google-cloud-sdk/bin:$PATH"
 
-# Create a directory for the service account key
-RUN mkdir /app
-
-# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-ENV GOOGLE_APPLICATION_CREDENTIALS=jason.json
-
 RUN python3 -m ensurepip --default-pip && \
     pip install --no-cache-dir --upgrade pip pipx && \
     python3 -m pipx ensurepath
@@ -37,6 +31,9 @@ ENV PATH="/root/.local/bin:$PATH"
 WORKDIR /dbt_demo
 # Copy the rest of the project files
 COPY . .
+
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
+ENV GOOGLE_APPLICATION_CREDENTIALS=jason.json
 
 # Install dependencies
 RUN poetry install --no-root
