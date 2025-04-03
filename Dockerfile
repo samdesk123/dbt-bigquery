@@ -23,9 +23,6 @@ ENV PATH="/google-cloud-sdk/bin:$PATH"
 # Create a directory for the service account key
 RUN mkdir /app
 
-# Copy the service account key into the container
-COPY jason.json /app/jason.json
-
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/jason.json
 
