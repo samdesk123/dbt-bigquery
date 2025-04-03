@@ -1,13 +1,13 @@
 bigquery:
   outputs:
     dev:
-      dataset: shubham
+      dataset: shubham_dbt_demo
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: US
       method: oauth
       priority: interactive
-      project: gcp-wow-rwds-ai-mmm-dev
+      project: digital-aloe-455622-i6
       threads: 1
       type: bigquery
   target: dev

@@ -1,0 +1,44 @@
+name: Build and Push Docker Image to Artifact Registry
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-push:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    env:
+        IMAGE_NAME: dbt_bigquery_poetry # Change this to your desired image name
+        REPOSITORY_NAME: githuaction # Change this to your Artifact Registry repository name
+        REGION: us-central1 # Change this to your Artifact Registry region (e.g., us-central1, europe-west1, etc.)
+        PROJECT_ID: digital-aloe-455622-i6 # Change this to your GCP project ID
+
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Authenticate with Google Cloud
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      # Configure Docker to use the gcloud command-line tool as a credential helper
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker REGION-docker.pkg.dev
+
+      # Build the Docker image
+      - name: Build Docker image
+        run: |
+          docker build -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/$IMAGE_NAME:latest .
+
+      # Push the Docker image to Artifact Registry
+      - name: Push Docker image
+        env:
+            GIT_TAG: v0.1.0
+        run: |
+          docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/$IMAGE_NAME:$GIT_TAG
