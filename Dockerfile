@@ -35,6 +35,7 @@ COPY . .
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/dbt_demo/jason.json
 
+RUN ls -a
 # Install dependencies
 RUN poetry install --no-root
 
