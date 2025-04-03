@@ -17,10 +17,11 @@ WORKDIR /dbt_demo
 
 COPY . .
 
-# Copy the service account key
-COPY sa_key.json /app/sa_key.json
+# Remove the hardcoded service account key copy
+# COPY sa_key.json /app/sa_key.json
 
-# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable dynamically
+# This will be passed at runtime via the workflow or Docker run command
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/sa_key.json
 
 # Set the DBT_PROFILES_DIR environment variable

@@ -15,11 +15,14 @@ jobs:
         REGION: us-central1 # Change this to your Artifact Registry region (e.g., us-central1, europe-west1, etc.)
         PROJECT_ID: digital-aloe-455622-i6 # Change this to your GCP project ID
 
-
     steps:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
+
+      # Write GCP credentials to a file
+      - name: Write GCP credentials to file
+        run: echo "${{ secrets.GCP_CREDENTIALS }}" > sa_key.json
 
       # Authenticate with Google Cloud
       - name: Authenticate with Google Cloud
@@ -34,7 +37,8 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/$IMAGE_NAME:latest .
+          docker build --build-arg GOOGLE_APPLICATION_CREDENTIALS=sa_key.json \
+          -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/$IMAGE_NAME:latest .
 
       # Push the Docker image to Artifact Registry
       - name: Push Docker image
@@ -42,3 +46,7 @@ jobs:
             GIT_TAG: v0.1.0
         run: |
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/$IMAGE_NAME
+
+      # Clean up the credentials file
+      - name: Remove GCP credentials file
+        run: rm sa_key.json
