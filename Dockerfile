@@ -1,5 +1,5 @@
-# Use a Python base image
-FROM python:3.9-slim-buster
+# Use a Python 3.11 base image
+FROM python:3.11-slim-buster
 
 ENV DBT_VERSION=1.0.0
 ENV PATH="/root/.local/bin:$PATH"
@@ -25,15 +25,13 @@ RUN python3 -m ensurepip --default-pip && \
     pip install --no-cache-dir --upgrade pip pipx && \
     python3 -m pipx ensurepath
 
-
 RUN pipx install poetry
+
 # Set the working directory
 WORKDIR /app
 
-
 # Copy the rest of the project files
 COPY . .
-
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/sa_key.json
