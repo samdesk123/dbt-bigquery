@@ -39,6 +39,7 @@ ENV GOOGLE_APPLICATION_CREDENTIALS=/app/sa_key.json
 # Install dependencies
 RUN poetry install --no-root
 
+WORKDIR /app/bigquery
 # Set the DBT_PROFILES_DIR environment variable
 ENV DBT_PROFILES_DIR=/app/bigquery
 
