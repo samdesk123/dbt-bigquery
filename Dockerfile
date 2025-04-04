@@ -31,9 +31,6 @@ RUN pipx install poetry
 WORKDIR /app
 
 
-# Install Poetry and project dependencies
-RUN pip install poetry && poetry install --no-root
-
 # Copy the rest of the project files
 COPY . .
 
