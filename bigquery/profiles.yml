@@ -4,7 +4,7 @@ bigquery:
       dataset: shubham_dbt_demo
       job_execution_timeout_seconds: 300
       job_retries: 1
-      location: US
+      location: us-central1
       method: oauth
       priority: interactive
       project: digital-aloe-455622-i6
